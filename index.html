@@ -23,21 +23,21 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="sidebar bar-block white animate-left text-grey collapse top center" style="z-index:3;width:300px;font-weight:bold" id="Sidebar"><br>
   <h3 class="padding-64 center"><b>Ramsey<br>van der Meer</b></h3>
-  <a href="javascript:void(0)" onclick="close()" class="bar-item button padding hide-large">CLOSE</a>
-  <a href="#" onclick="close()" class="bar-item button">Phtotography</a> 
-  <a href="gear.html" onclick="close()" class="bar-item button">Gear</a> 
-  <a href="projects.html" onclick="close()" class="bar-item button">Projects</a> 
-  <a href="#about" onclick="close()" class="bar-item button">about</a>
+  <a href="javascript:void(0)" onclick="on_close()" class="bar-item button padding hide-large">CLOSE</a>
+  <a href="#" onclick="on_close()" class="bar-item button">Phtotography</a> 
+  <a href="gear.html" onclick="on_close()" class="bar-item button">Gear</a> 
+  <a href="projects.html" onclick="on_close()" class="bar-item button">Projects</a> 
+  <a href="#about" onclick="on_close()" class="bar-item button">about</a>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="container top hide-large white xlarge padding-16">
   <span class="left padding">Ramsey van der Meer</span>
-  <a href="javascript:void(0)" class="right button white" onclick="open()">☰</a>
+  <a href="javascript:void(0)" class="right button white" onclick="on_open()">☰</a>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
+<div class="overlay hide-large animate-opacity" onclick="on_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:300px">
@@ -127,12 +127,12 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <script>
 // Script to open and close sidebar
-function open() {
+function on_open() {
   document.getElementById("Sidebar").style.display = "block";
   document.getElementById("Overlay").style.display = "block";
 }
  
-function close() {
+function on_close() {
   document.getElementById("Sidebar").style.display = "none";
   document.getElementById("Overlay").style.display = "none";
 }
