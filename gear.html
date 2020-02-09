@@ -2,6 +2,14 @@
 <html lang="en">
 <title>Ramsey</title>
 <meta charset="UTF-8">
+<!--<head><link rel='icon' href='favicon.ico' type='image/x-icon'/ ></head>-->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/chrome-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font.css">
@@ -15,36 +23,89 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="sidebar bar-block white animate-left text-grey collapse top center" style="z-index:3;width:300px;font-weight:bold" id="Sidebar"><br>
   <h3 class="padding-64 center"><b>Ramsey<br>van der Meer</b></h3>
-  <a href="javascript:void(0)" onclick="close()" class="bar-item button padding hide-large">CLOSE</a>
-  <a href="index.html" onclick="close()" class="bar-item button">Phtotography</a> 
-  <a href="#" onclick="close()" class="bar-item button">Gear</a> 
-  <a href="projects.html" onclick="close()" class="bar-item button">Projects</a> 
-  <a href="#about" onclick="close()" class="bar-item button">about</a>
+  <a href="javascript:void(0)" onclick="on_close()" class="bar-item button padding hide-large">CLOSE</a>
+  <a href="index.html" onclick="on_close()" class="bar-item button">Phtotography</a> 
+  <a href="#" onclick="on_close()" class="bar-item button">Gear</a> 
+  <a href="projects.html" onclick="on_close()" class="bar-item button">Projects</a> 
+  <a href="#about" onclick="on_close()" class="bar-item button">about</a>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="container top hide-large white xlarge padding-16">
   <span class="left padding">Ramsey van der Meer</span>
-  <a href="javascript:void(0)" class="right button white" onclick="open()">☰</a>
+  <a href="javascript:void(0)" class="right button white" onclick="on_open()">☰</a>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
+<div class="overlay hide-large animate-opacity" onclick="on_close()" style="cursor:pointer" title="close side menu" id="Overlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:300px">
 
   <!-- Push down content on small screens --> 
   <div class="hide-large" style="margin-top:83px"></div>
+  
+  <div class="row">
+    
+    <div class="half top-padding-head left-padding">
+            <div class="card top-padding">
+                <img src="gear/camera.png" alt="Avatar" style="width:40%" class="center-image">
+                <div class="container center-text">
+                <h4><b>Nikon D-750</b></h4>
+                </div>
+            </div>
+            <div class="top-padding-body">
+                <div class="card top-padding">
+                    <img src="gear/85mm.png" alt="Avatar" style="width:40%" class="center-image">
+                    <div class="container center-text">
+                    <h4><b>AF-S NIKKOR 85mm f/1.4G</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="top-padding-body">
+                <div class="card top-padding">
+                    <img src="gear/filter.png" alt="Avatar" style="width:40%" class="center-image">
+                    <div class="container center-text">
+                    <h4><b>ND/Polarizer/GND/VND</b></h4>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="half top-padding-head left-padding">
+            <div class="card">
+                <img src="gear/70-200mm.png" alt="Avatar" style="width:40%" class="center-image">
+                <div class="container center-text">
+                <h4><b>AF-S NIKKOR 70-200mm f/2.8G ED VR II</b></h4>
+                </div>
+            </div>
+            <div class="top-padding-body">
+                <div class="card top-padding-small">
+                    <img src="gear/58mm.png" alt="Avatar" style="width:40%" class="center-image">
+                    <div class="container center-text">
+                    <h4><b>Noct-NIKKOR 58mm f/1.2</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="top-padding-body">
+                <div class="card top-padding-small">
+                    <img src="gear/pixel.png" alt="Avatar" style="width:40%" class="center-image">
+                    <div class="container center-text">
+                    <h4><b>Google Pixel 3</b></h4>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+  </div>
 
   <!-- Pagination -->
   <div class="center padding-32">
     <div class="bar">
       <a href="#" class="bar-item button hover-black">«</a>
       <a href="#" class="bar-item black button">1</a>
-      <a href="#" class="bar-item button hover-black">2</a>
-      <a href="#" class="bar-item button hover-black">3</a>
-      <a href="#" class="bar-item button hover-black">4</a>
+      <!--<a href="page2.html" class="bar-item button hover-black">2</a>
+      <a href="page3.html" class="bar-item button hover-black">3</a> -->
       <a href="#" class="bar-item button hover-black">»</a>
     </div>
   </div>
@@ -58,24 +119,24 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  
   <!-- Footer -->
   <footer class="container padding-32 grey">  
     <div class="row-padding">
-      <div class="third">
+      <div class="text">
         <h3>INFO</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>      
+          <p><u>Copyright © 2020 Ramsey van der Meer All Rights Reserved</u></p><br>
+				  <p>Instagram @<a href="https://www.instagram.com/ramsey_photos/"  target="_blank" ><u>Ramsey_Photos</u></a></a> for more photos</p>     
       </div>
     </div>
 
 <script>
 // Script to open and close sidebar
-function open() {
+function on_open() {
   document.getElementById("Sidebar").style.display = "block";
   document.getElementById("Overlay").style.display = "block";
 }
  
-function close() {
+function on_close() {
   document.getElementById("Sidebar").style.display = "none";
   document.getElementById("Overlay").style.display = "none";
 }
