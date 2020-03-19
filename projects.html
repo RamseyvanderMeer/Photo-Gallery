@@ -27,7 +27,8 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <a href="index.html" onclick="on_close()" class="bar-item button">Phtotography</a> 
   <a href="gear.html" onclick="on_close()" class="bar-item button">Gear</a> 
   <a href="#" onclick="on_close()" class="bar-item button">Projects</a> 
-  <a href="#about" onclick="on_close()" class="bar-item button">about</a>
+  <a href="about.html" onclick="on_close()" class="bar-item button">about</a>
+
 </nav>
 
 <!-- Top menu on small screens -->
@@ -69,6 +70,15 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <p>Created a facial recognition python package leveraging faiss, an algorithm made by facebook. This used 128 bit vector encoding of color shifts and their direction to compare to a video stream. With faiss the comparison process was made quicker as it could group similar encodings and use a tree to navigate to the most accurate one.</p>
             </div>
         </div>
+
+        <div class="card top-padding margin-bottom">
+          <img src="proj/chatbot.png" alt="Avatar" style="width:75%" class="center-image">
+          <div class="container center-text">
+          <h4><b>Chatbot using machine Learning</b></h4>
+          <p>Trained a Chatbot through 1000 epochs with an intent understanding using a nural net composed of inputs all connected to two rows of 8 perdictive nodes wich finally connect to an output node with the probailities of top 5 answers. from there I choose the top one if it meets a threshhold and reject if it does not.</p>
+          </div>
+      </div>
+
     </div>
 
     <div class="third margin-top left-padding">
