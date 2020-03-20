@@ -1,9 +1,3 @@
 *.DS_Store
-*.jpg
-*.png
-*.ico
+
 *.webmanifest
-*.ico
-favicon
-images
-proj
